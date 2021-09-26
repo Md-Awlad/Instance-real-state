@@ -23,7 +23,6 @@ const Main = () => {
                         data={item} 
                         key={item.id}
                         item={handleAddCart} 
-                    
                     />)
                 }
             </div>
@@ -33,5 +32,4 @@ const Main = () => {
         </main>
     )
 };
-
 export default Main;
