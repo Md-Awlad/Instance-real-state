@@ -1,0 +1,28 @@
+.add-Cart{
+    background-color: #ea9937;
+    padding: 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.add-Cart h1{
+    margin-top: 0px;
+}
+.show-Cart{
+    display: flex;
+    background-color: #237F52;
+    margin-bottom: 10px;
+    width: 70%;
+    text-align: center;
+
+}
+.show-Cart h4{
+    margin-left: 20px;
+    color: white;
+}
+.show-Cart img{
+    width: 30%;
+}
