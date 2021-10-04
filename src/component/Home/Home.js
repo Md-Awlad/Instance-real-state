@@ -14,7 +14,7 @@ const Home = () => {
         history.push('/services')
     }
     return (
-        <div>
+        <div className='home-main'>
            <div className='home-banner'>
                <HomeBanner></HomeBanner>
            </div>
@@ -34,7 +34,9 @@ const Home = () => {
             <button onClick={allCoursehandler} className='header-button1'>All Services</button>
             </div>
             </Container>
+            <div className="for-sapce"></div>
            </div>
+           
         </div>
     );
 };

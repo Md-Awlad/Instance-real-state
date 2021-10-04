@@ -24,7 +24,7 @@ const Footer = () => {
                <FontAwesomeIcon className='' size='2x' icon={faInstagram } />
                </p>
             </Col>
-            <Col xs={6} md={4} sm={12}>
+            <Col xs={12} md={4} sm={12}>
             <h2>Categories</h2>
             <ul>
                 <li>Photoshop</li>

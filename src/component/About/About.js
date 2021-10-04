@@ -21,7 +21,7 @@ const About = () => {
                     <Col>
                     <Card className='about-card' border="primary" style={{ width: '' }}>
                     <Card.Body>
-                        <p className='card-icon'><i class="fas fa-medal"></i></p>
+                        <p className='card-icon'><i className="fas fa-medal"></i></p>
                     <Card.Title className='card-title'><h2>High Quality Courses</h2></Card.Title>
                     <Card.Text className='card-dis'>
                     Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
@@ -32,7 +32,7 @@ const About = () => {
                     <Col>
                     <Card className='about-card' border="primary" style={{ width: '' }}>
                     <Card.Body>
-                        <p className='card-icon'><i class="fas fa-user-alt"></i></p>
+                        <p className='card-icon'><i className="fas fa-user-alt"></i></p>
                     <Card.Title className='card-title'><h2>Expert Instructors</h2></Card.Title>
                     <Card.Text className='card-dis'>
                     Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
@@ -43,7 +43,7 @@ const About = () => {
                     <Col>
                     <Card className='about-card' border="primary" style={{ width: '' }}>
                     <Card.Body>
-                        <p className='card-icon'><i class="fas fa-shield-alt"></i></p>
+                        <p className='card-icon'><i className="fas fa-shield-alt"></i></p>
                     <Card.Title className='cards-title'><h2>Life Time Access</h2></Card.Title>
                     <Card.Text className='card-dis'>
                     Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
