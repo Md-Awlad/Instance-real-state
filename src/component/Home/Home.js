@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
+import { useHistory } from 'react-router';
 import Course from '../Course/Course';
 // import {Button} from 'react-bootstrap';
 import HomeBanner from '../HomeBanner/HomeBanner';
@@ -8,7 +9,10 @@ import './Home.css'
 
 const Home = () => {
     const [courses] = useLoadCourse();
-    console.log(courses)
+    const history = useHistory();
+    const allCoursehandler =()=>{
+        history.push('/services')
+    }
     return (
         <div>
            <div className='home-banner'>
@@ -21,11 +25,14 @@ const Home = () => {
                    <p>Services</p>
                    <h1>Explore Popular Services</h1>
                    </div>
-           <Row  xs={1} md={3} xl={3} className="g-4">
+           <Row  xs={1} md={2} xl={2} className="g-5">
            { courses && 
-            courses.slice(0,3).map(item => <Course items={item} key={item.id}></Course>)
+            courses.slice(0,4).map(item => <Course items={item} key={item.id}></Course>)
             }
             </Row>
+            <div style={{textAlign: 'center',marginTop: '60px'}} className="all-courses-button">
+            <button onClick={allCoursehandler} className='header-button1'>All Services</button>
+            </div>
             </Container>
            </div>
         </div>

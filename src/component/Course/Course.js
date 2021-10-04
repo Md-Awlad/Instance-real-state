@@ -10,17 +10,16 @@ const Course = (props) => {
       <Card className='custom-cards'>
         <Card.Img variant="top" src={img} />
         <Card.Body className='card-inners'>
-            <h4 className='service-price'> ${price}</h4>
-          <Card.Title> <h2 className='course-name'>{name.slice(0,47)}</h2>
-          </Card.Title>
+            <span className='service-price'>${price}</span>
+          <Card.Title><span  className='course-name'>{name}</span></Card.Title>
           <Rating className='rating'
             initialRating={rating}
             emptySymbol='far fa-star'
          fullSymbol='fas fa-star'
                  readonly
                     />
-          <Card.Text>
-            <p className='author'><b>{author}</b></p>
+          <Card.Text className='author'>
+            <b>{author}</b>
           </Card.Text>
         </Card.Body>
       </Card>

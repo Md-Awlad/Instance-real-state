@@ -2,16 +2,16 @@ import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import Course from '../Course/Course';
 import useLoadCourse from '../loadCourse/loadCourse';
+import './AllServices.css'
 
 const AllServices = () => {
     const [courses] = useLoadCourse();
-    console.log(courses)
     return (
-        <div className='home-service'>
+        <div className='all-service'>
                <Container>
                    <div className="home-servic-text">
-                   <p>Services</p>
-                   <h1>Explore Popular Services</h1>
+                  
+                   <h1>Explore All Services</h1>
                    </div>
            <Row  xs={1} md={3} xl={3} className="g-4">
            { courses && 

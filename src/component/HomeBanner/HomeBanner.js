@@ -1,8 +1,12 @@
 import React from 'react';
-import {Button as button} from 'react-bootstrap';
+import { useHistory } from 'react-router';
 import './HomeBanner.css'
 
 const HomeBanner = () => {
+    const history = useHistory()
+    const allCoursehandler =()=>{
+        history.push('/services')
+    }
     return (
         <div className='banner'>
             <div className="containers"  style={{width: '65%', margin: 'auto'}}>
@@ -10,7 +14,7 @@ const HomeBanner = () => {
             </p>
             <h1>Connect With Our Expert And Start Learning Today</h1>
             <p className='header-button'>We are providing high-quality online courses to improve your skill. Our all instructors are highly experienced and experts.</p>
-            <button className='header-button1'>Find Course</button>
+            <button onClick={allCoursehandler} className='header-button1'>Find Course</button>
             <button className='header-button2'>Explore More</button>
             </div>
             <div className="overly"></div>

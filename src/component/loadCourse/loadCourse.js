@@ -6,7 +6,6 @@ const useLoadCourse =()=>{
         .then(res=>res.json())
         .then(data=>setCourse(data))
     },[])
-    console.log(courses)
     return [courses]
 }
 export default useLoadCourse

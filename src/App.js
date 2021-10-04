@@ -6,6 +6,7 @@ import AllServices from './component/AllServices/AllServices';
 import { BrowserRouter, Switch,Route } from 'react-router-dom';
 import About from './component/About/About';
 import NotFound from './component/NotFound/NotFound';
+import Contact from './component/Contact/Contact';
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
         </Route>
         <Route path='/about'>
         <About></About>
+        </Route>
+        <Route path='/contact'>
+        <Contact></Contact>
         </Route>
         <Route path='*'>
         <NotFound></NotFound>

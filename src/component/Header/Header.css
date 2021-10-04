@@ -1,18 +1,15 @@
 .nav-link{
     font-size: 22px ;
     padding-left: 30px !important;
-    font-weight: 600;
+    font-weight: 700;
     font-family: 'Rajdhani', sans-serif;
+    color: #130F40 !important;
     
-}
-.nav-link a{
-    text-decoration: none ;
-    color: #130F40;
 }
 .header-link{
     margin-right: 30px;
 }
-.header-button1{
+.header-button-design{
     background-color: #FF630E !important;
     color:white !important;
     border: none !important;
