@@ -1,0 +1,26 @@
+.service-price{
+    color:#FF630E;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 5px;
+}
+.course-name{
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 35px;
+}
+.author{
+    border-top: 1px solid rgb(238, 234, 234);
+    padding-top: 10px;
+}
+.rating{
+    margin-bottom: 20px;
+    color: #F4C150;
+}
+.card-inners{
+    padding: 20px
+}
+.custom-cards{
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}

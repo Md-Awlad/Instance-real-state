@@ -1,0 +1,37 @@
+.about-us-text{
+   text-align: center;
+   padding: 50px 0px;
+}
+.about-us-text h1{
+    font-weight: 700;
+    margin: 20px 0px;
+}
+.about-us-text p{
+    font-weight: 500;
+    font-size: 18px;
+}
+.about-us-card{
+    text-align: center;
+   padding: 50px 0px;
+}
+.about-us-card h1{
+    font-weight: 700;
+    margin: 20px 0px;
+}
+.card-icon{
+    font-size: 50px;
+    color: #FF630E;
+}
+.cards-title{
+    font-weight: 700 !important;
+}
+.about-us-card{
+    background-color: #F7F7F7;
+    padding: 100px 0px;
+}
+.about-card{
+    border: none !important;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px 0px;
+    border-radius: 5px;
+}

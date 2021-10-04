@@ -1,0 +1,17 @@
+.home-service{
+    background-color: #F7F7F7;
+    padding: 100px 0px;
+}
+.home-servic-text{
+    text-align: center;
+}
+.home-servic-text p{
+color: #FF630E;
+font-weight: 600;
+font-size: 20px;
+text-transform: uppercase;
+}
+.home-servic-text h1{
+    font-weight: 700;
+    margin-bottom: 50px;
+}
