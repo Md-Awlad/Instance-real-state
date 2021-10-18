@@ -1,0 +1,51 @@
+.footer{
+    background-color: black;
+    padding-top: 50px;
+}
+.footer p{
+    color: rgb(148, 148, 148);
+    font-size: 16px;
+    margin: 4px;
+}
+.footer p i{
+    color: #548E31;
+}
+.footer-social{
+    margin-top: 20px !important;
+}
+.footer-social i{
+    color: white !important;
+    background-color: #6AB43E;
+    padding: 7px;
+    margin-right: 10px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.footer-social i:hover{
+    background-color: #4b8827;
+}
+
+.footer-links h3{
+    color: white;
+    font-size: 18px;
+    border-bottom: 1px solid #6AB43E;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+.footer-links p{
+    border-bottom: 1px dotted rgb(87, 86, 86);
+    padding-bottom: 10px;
+}
+.footer-insta h3{
+    color: white;
+    font-size: 18px;
+    border-bottom: 1px solid #6AB43E;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+.copyright{
+    background-color: #333333;
+    padding: 20px 0px;
+    text-align: center;
+    margin-top: 50px;
+}

@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "name": "Andrew Sebastian",
+      "specialist": "Dermatologist",
+      "img": "https://html.xpeedstudio.com/medizco/images/resource/team-2.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Jhon Kinnnl",
+      "specialist": "Cardiology",
+      "img": "https://html.xpeedstudio.com/medizco/images/resource/team-1.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Lio spnner",
+      "specialist": "Radiology",
+      "img": "https://html.xpeedstudio.com/medizco/images/resource/team-4.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Rahul Newer",
+      "specialist": "Radiology",
+      "img": "https://html.xpeedstudio.com/medizco/images/resource/team-3.jpg"
+    }
+  ]

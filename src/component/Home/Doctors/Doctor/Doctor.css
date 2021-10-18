@@ -1,0 +1,26 @@
+.doctors{
+    background-color: #ffffff;
+    padding: 100px 0px;
+}
+.single-doctor img{
+border-radius: 50%;
+width: 80%;
+margin: auto;
+margin-top: 20px;
+}
+.single-doctor .card{
+    /* padding: 20px; */
+    text-align: center;
+
+}
+.single-doctor .card-body{
+    padding: 0px;
+    padding-top: 20px;
+}
+.single-doctor .card-title{
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+.single-doctor .card-text{
+    color: #4ABF50;
+}

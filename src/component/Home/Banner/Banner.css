@@ -1,0 +1,33 @@
+.banner{
+    background-image: url(../../../image/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.banner-bold{
+    color: #45B74B;
+    font-weight: bold;
+    font-size: 20px;
+}
+.banner-info{
+    padding: 160px 0px;
+}
+.banner-info h1{
+font-size:70px;
+font-weight: bold;
+}
+.banner-info p{
+    padding: 10px 0px;
+    font-size: 18px;
+}
+.button-top{
+    border: none;
+    padding: 8px 30px;
+    background-color: #48BE4E;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+.button-top:hover{
+    background-color: #358b39;
+}
