@@ -15,7 +15,6 @@ const useServices =()=>{
         .then(res=> res.json())
         .then(data => setService(data))
     },[])
-    console.log(service)
     return {
         service,
         doctor

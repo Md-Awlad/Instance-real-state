@@ -5,3 +5,7 @@
   color: rgb(0, 0, 0) !important;  
   margin-left: 25px !important;
 }
+.navbar-text{
+  font-weight: bold;
+  color: #48BE4E !important;
+}

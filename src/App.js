@@ -1,19 +1,29 @@
+import { BrowserRouter,Switch,Route } from 'react-router-dom';
 import './App.css';
 import Footer from './component/Footer/Footer';
 import Header from './component/Header/Header';
-import Banner from './component/Home/Banner/Banner';
-import Doctors from './component/Home/Doctors/Doctors';
-import Service from './component/Home/Service/Service';
-import Testimonial from './component/Home/Testimonial/Testimonial';
+import Home from './component/Home/Home';
+import Login from './component/Login/Login';
+
 function App() {
   return (
     <div className="App">
+     
+     <BrowserRouter>
      <Header></Header>
-     <Banner></Banner>
-     <Service></Service>
-     <Doctors/>
-     <Testimonial/>
+     <Switch>
+    <Route exact path="/">
+    <Home></Home>
+    </Route>
+    <Route path="/home">
+    <Home></Home>
+    </Route>
+    <Route path="/login">
+    <Login></Login>
+    </Route>
+     </Switch>
      <Footer></Footer>
+     </BrowserRouter>
     </div>
   );
 }

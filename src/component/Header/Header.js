@@ -1,8 +1,11 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import useFirebase from '../../hooks/useFirebase';
 import img from '../../image/logo.png'
 import './Header.css'
 
 const Header = () => {
+  const {user,logOut} = useFirebase();
     return (
            <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container">
@@ -15,18 +18,23 @@ const Header = () => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="frf">Home</a>
+          <NavLink className='nav-link'  aria-current="page" to='/home'>Home</NavLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="g">About</a>
+        <NavLink className='nav-link' to='/login'>About</NavLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="g">Contact</a>
+        <NavLink className='nav-link' to='/login'>About</NavLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="g">Login</a>
+        <NavLink className='nav-link' to='/login'>
+          {user?.email ? <a href onClick={logOut}>Logout</a> : "Login"}
+          </NavLink>
         </li>
       </ul>
+      <span id="icon-header" class="navbar-text">
+      {user?.email && `| Username: ${user?.displayName}`  }
+      </span>
     </div>
   </div>
 </nav> 
