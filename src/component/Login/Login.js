@@ -1,8 +1,8 @@
 import React from 'react';
-import useFirebase from '../../hooks/useFirebase';
+import useAuth from '../../hooks/useAuth';
 import './Login.css'
 const Login = () => {
-    const {getName,getEmail,getPass,getPosition,createUseremail,error,isLogin,googleLogin} =useFirebase()
+    const {getName,getEmail,getPass,getPosition,createUseremail,error,isLogin,googleLogin} =useAuth()
     return (
         <div className='login-section'>
            <div className="container">

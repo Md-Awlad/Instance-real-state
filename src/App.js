@@ -4,11 +4,15 @@ import Footer from './component/Footer/Footer';
 import Header from './component/Header/Header';
 import Home from './component/Home/Home';
 import Login from './component/Login/Login';
+import NotFound from './component/NotFound/NotFound';
+import PrivateRoute from './component/PrivateRoute/PrivateRoute';
+import ServiceInfo from './component/ServiceInfo/ServiceInfo';
+import ProvideAuth from './ProvideAuth/ProvideAuth';
 
 function App() {
   return (
     <div className="App">
-     
+     <ProvideAuth>
      <BrowserRouter>
      <Header></Header>
      <Switch>
@@ -21,9 +25,16 @@ function App() {
     <Route path="/login">
     <Login></Login>
     </Route>
+    <Route path="/service-info/:serviceid">
+    <ServiceInfo></ServiceInfo>
+    </Route>
+    <Route path="*">
+      <NotFound></NotFound>
+    </Route>
      </Switch>
      <Footer></Footer>
      </BrowserRouter>
+     </ProvideAuth>
     </div>
   );
 }

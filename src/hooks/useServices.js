@@ -5,13 +5,13 @@ const useServices =()=>{
     const [doctor,setDoctor] = useState([]);
 
     useEffect(()=>{
-        fetch('doctor.json')
+        fetch('/doctor.json')
         .then(res=> res.json())
         .then(data=> setDoctor(data))
     },[]);
 
     useEffect(()=>{
-        fetch('service.json')
+        fetch('/service.json')
         .then(res=> res.json())
         .then(data => setService(data))
     },[])
