@@ -13,21 +13,17 @@ const [password, setPassword] = useState('');
 const [isLogin, setIslogin] = useState(false);
 const [error, setError]= useState('');
 const [user, setUser] =useState({});
+const [isLoading, setIsloading] = useState(true)
 
 // google login singup 
 const googleLogin =()=>{
-    signInWithPopup(auth,googleProvider)
-    .then(result=>{
-        console.log(result.user)
-    })
-    .catch(error=>{
-        setError(error.code)
-    })
+    setIsloading(true)
+   return signInWithPopup(auth,googleProvider)
 }
 // login using email password 
 const createUseremail =(e)=>{
     if(isLogin){
-        createAccount()
+        createAccount();
     }else{
         loginAccount()
     }
@@ -35,19 +31,25 @@ const createUseremail =(e)=>{
 }
 // create account 
 const createAccount=()=>{
-    createUserWithEmailAndPassword(auth, email, password)
+    setIsloading(true)
+   return createUserWithEmailAndPassword(auth, email, password)
     .then(result=>{
-    updateProfile(auth.currentUser, {
-        displayName:name
-    })
-    console.log(result.user)
+        updateProfileInfo()
 })
 .catch(error=>{
     setError(error.code)
 })
+.finally(()=> setIsloading(false))
+}
+// update profile 
+const updateProfileInfo=()=>{
+    updateProfile(auth.currentUser, {
+        displayName:name
+    })
 }
 // login account 
 const loginAccount=()=>{
+    setIsloading(true)
     signInWithEmailAndPassword(auth, email, password)
     .then(result=>{  
         console.log(result.user)
@@ -55,9 +57,11 @@ const loginAccount=()=>{
     .catch(error=>{
         setError(error.code)
     })
+    .finally(()=>setIsloading(false))
 }
 // logut system here 
 const logOut =()=>{
+    setIsloading(true)
     signOut(auth)
     .then(result=>{
         setUser({})
@@ -65,6 +69,7 @@ const logOut =()=>{
     .catch(error=>{
         setError(error.code)
     })
+    .finally(()=>setIsloading(false))
 }
 // Check login user 
 useEffect(()=>{
@@ -72,7 +77,9 @@ useEffect(()=>{
         if(user){
             setUser(user)
         }
+        setIsloading(false)
     })
+   
 },[])
 // get name value 
 const getName =(e)=>{
@@ -98,9 +105,13 @@ return{
     createUseremail,
     googleLogin,
     error,
+    setError,
     isLogin,
     user,
-    logOut
+    logOut,
+    createAccount,
+    setIsloading,
+    isLoading
 }
 }
 export default useFirebase;

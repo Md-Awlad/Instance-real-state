@@ -1,5 +1,7 @@
 import { BrowserRouter,Switch,Route } from 'react-router-dom';
 import './App.css';
+import About from './component/About/About';
+import Contact from './component/Contact/Contact';
 import Footer from './component/Footer/Footer';
 import Header from './component/Header/Header';
 import Home from './component/Home/Home';
@@ -25,9 +27,16 @@ function App() {
     <Route path="/login">
     <Login></Login>
     </Route>
-    <Route path="/service-info/:serviceid">
-    <ServiceInfo></ServiceInfo>
-    </Route>
+    
+    <PrivateRoute path="/service-info/:serviceid">
+      <ServiceInfo></ServiceInfo>
+    </PrivateRoute>
+    <PrivateRoute path="/about">
+    <About></About>
+    </PrivateRoute>
+    <PrivateRoute path="/contact">
+    <Contact></Contact>
+    </PrivateRoute>
     <Route path="*">
       <NotFound></NotFound>
     </Route>

@@ -1,8 +1,23 @@
 import React from 'react';
+import { Redirect, useHistory, useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 import './Login.css'
 const Login = () => {
-    const {getName,getEmail,getPass,getPosition,createUseremail,error,isLogin,googleLogin} =useAuth()
+    const {getName,getEmail,getPass,getPosition,createUseremail,error,isLogin,googleLogin,setError,setIsloading,createAccount} =useAuth();
+    const location = useLocation();
+    const history = useHistory()
+    const currntLoation = location.state?.from || '/home'
+      const handleGoogleLogin=()=>{
+        googleLogin()
+        .then(result=>{
+            history.push(currntLoation)
+        })
+        .catch(error=>{
+            setError(error.code)
+        })
+        .finally(()=>setIsloading(false))
+      }
+    // const 
     return (
         <div className='login-section'>
            <div className="container">
@@ -29,7 +44,7 @@ const Login = () => {
         </form>
         <p>Or {isLogin ? "Signup" : 'Login'} with</p>
         <div className="google-login">
-        <button onClick={googleLogin} className=''><i className="fab fa-google-plus-square"></i> Google</button>
+        <button onClick={handleGoogleLogin} className=''><i className="fab fa-google-plus-square"></i> Google</button>
         </div>
                </div>
            </div>

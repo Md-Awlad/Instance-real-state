@@ -1,17 +1,21 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import img from '../../image/logo.png'
 import './Header.css'
 
 const Header = () => {
   const {user,logOut} = useAuth();
+  console.log(user)
     return (
            <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container">
-    <a className="navbar-brand" href="grg">
-        <img src={img} alt="" />
-    </a>
+   
+      <Link to="/home" className="navbar-brand">
+      <img src={img} alt="" />
+      </Link>
+        
+   
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -21,19 +25,19 @@ const Header = () => {
           <NavLink className='nav-link'  aria-current="page" to='/home'>Home</NavLink>
         </li>
         <li className="nav-item">
-        <NavLink className='nav-link' to='/login'>About</NavLink>
+        <NavLink className='nav-link' to='/about'>About</NavLink>
         </li>
         <li className="nav-item">
-        <NavLink className='nav-link' to='/login'>Services</NavLink>
+        <NavLink className='nav-link' to='/contact'>Contact</NavLink>
         </li>
         <li className="nav-item">
         <NavLink className='nav-link' to='/login'>
-          {user?.email ? <a href onClick={logOut}>Logout</a> : "Login"}
+          {user?.email ? <a href className='logout-button button-top' onClick={logOut}>Logout</a> : "Login"}
           </NavLink>
         </li>
       </ul>
       <span id="icon-header" className="navbar-text">
-      {user?.email &&  `| Username: ${user?.displayName}`  }
+      {user?.photoURL ? (<img src={user?.photoURL} alt=".."/>) :  (<div className=" text-info p-1" style={{borderRadius:'50px'}}>{user?.displayName?.slice(0,5)}</div>)}
       </span>
     </div>
   </div>
