@@ -35,6 +35,8 @@ const createAccount=()=>{
    return createUserWithEmailAndPassword(auth, email, password)
     .then(result=>{
         updateProfileInfo()
+        window.location.reload();
+
 })
 .catch(error=>{
     setError(error.code)
