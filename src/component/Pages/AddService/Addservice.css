@@ -1,0 +1,19 @@
+.add-service {
+    padding: 80px 0px;
+}
+.add-service form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+
+}
+.add-service input{
+    margin-bottom: 20px;
+ padding: 10px 5px;
+}
+.add-service button{
+    margin-top: 10px;
+
+}

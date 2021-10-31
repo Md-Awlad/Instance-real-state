@@ -20,12 +20,20 @@ const Header = () => {
         <li className="nav-item">
           <NavLink to="/home" className="nav-link active" aria-current="page">Home</NavLink>
         </li>
+        {user?.email && 
+        <li className="nav-item">
+        <NavLink to="/my-order" className="nav-link">My orders</NavLink>
+        </li>}
+        {user?.email && 
         <li className="nav-item">
         <NavLink to="/manage-order" className="nav-link">Manage order</NavLink>
         </li>
+            }
+        {user?.email && 
         <li className="nav-item">
-        <NavLink to="/my-order" className="nav-link">My orders</NavLink>
+        <NavLink to="/add-service" className="nav-link">Add Service</NavLink>
         </li>
+            }
         <li className="nav-item">
         <NavLink to="/login" className="nav-link">{user.email ? <button onClick={logout}>Logout</button> : "Login"}</NavLink>
         </li>

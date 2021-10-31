@@ -7,10 +7,10 @@ const Banner = () => {
            <div className="container">
                <h3>Welcome to FiveStar</h3>
                 <h1>VILLAGE INSPIRATION</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas in dolores aspernatur praesentium expedita autem alias magni, earum quasi quia!</p>
+                <p>HIGH QUALITY ACCOMMODATION SERVICES</p>
                </div> 
         </div>
     );
 };
 
-export default Banner;
+export default Banner; 

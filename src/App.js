@@ -1,12 +1,14 @@
 import { BrowserRouter,Switch,Route } from 'react-router-dom';
 import './App.css';
 import AuthProviders from './component/AuthProvider/AuthProvider';
+import AddService from './component/Pages/AddService/AddService';
 import Footer from './component/Pages/Footer/Footer';
 import Header from './component/Pages/Header/Header';
 import Home from './component/Pages/Home/Home';
 import Login from './component/Pages/Login/Login';
 import ManageOrder from './component/Pages/ManageOrder/ManageOrder';
 import MyOrders from './component/Pages/MyOrders/MyOrders';
+import NotFound from './component/Pages/NotFound/NotFound';
 import PlaceOrer from './component/Pages/PlaceOrder/PlaceOrer';
 import PrivateRoute from './component/PrivateRoute/PrivateRoute';
 
@@ -35,6 +37,12 @@ function App() {
         <PrivateRoute path="/manage-order">
         <ManageOrder></ManageOrder>
         </PrivateRoute>
+        <PrivateRoute path="/add-service">
+       <AddService></AddService>
+        </PrivateRoute>
+        <Route path="*">
+    <NotFound></NotFound>
+        </Route>
       </Switch>
       <Footer></Footer>
       </BrowserRouter>

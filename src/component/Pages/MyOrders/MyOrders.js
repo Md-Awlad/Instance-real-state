@@ -12,6 +12,7 @@ const MyOrders = () => {
         <div className='manage-order'>
             <div className="container">
                 <h1 className='section-title'>My Orders</h1>
+                {myorder.length ? "" : "Not data found"}
            {
              myorder?.map(item=><Orders values={item}></Orders>)  
            }

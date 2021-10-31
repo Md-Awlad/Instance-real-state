@@ -17,7 +17,7 @@ const PlaceOrer = () => {
         data.img = seletedroom?.img;
         data.description = seletedroom?.description
         data.uid = user?.uid
-        fetch('http://localhost:5000/orders',{
+        fetch('https://evening-shelf-32402.herokuapp.com/orders',{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

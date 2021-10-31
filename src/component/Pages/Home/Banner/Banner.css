@@ -20,4 +20,9 @@
 .banner-container p{
     font-size: 20px;
 }
+@media only screen and (max-width: 687px) {
+    .banner-container h1{
+        font-size: 30px;
+    } 
+}
 

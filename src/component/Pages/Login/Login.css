@@ -23,3 +23,8 @@
     color: rgb(16, 97, 204);
     margin-right: 5px;
 }
+@media only screen and (max-width: 687px) {
+    .form-body{
+      width: 100%;
+    }
+   }

@@ -1,38 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import useOrders from '../../hooks/useOrder';
 import './Orders.css'
 const Orders = (props) => {
     const {name,item,email,img,address,description,_id} = props.values;
     // const {setOrder,order} = useOrders()
 
 
-    const [order,setOrder] = useState([])
-    useEffect(()=>{
-        fetch('http://localhost:5000/orders')
-    .then(res=>res.json())
-    .then(data=>{
-        setOrder(data)
-    })
-    },[])
-
-
    const deleteItems=(id)=>{
-    const alertintg = window.confirm("Do you want to remove?")
+    const alertintg = window.confirm("Do you want to Cancel?")
     console.log(alertintg)
     if(alertintg){
-      fetch(`http://localhost:5000/orders/${id}`,{
+      fetch(`https://evening-shelf-32402.herokuapp.com/orders/${id}`,{
       method: 'DELETE'
     })
     .then(res=>res.json())
     .then(data=>{
-      const newItem = order.filter(item=>item._id !== id);
-      console.log(newItem)
-      setOrder(newItem)
-      console.log(data)
+      window.location.reload();
     })
     }
    }
-      
     return (
         <div className='order-card'>
           <div class="card mb-3">

@@ -10,3 +10,8 @@
 .header-name{
     color: #C59D5F;
 }
+@media only screen and (max-width: 414px) {
+    .navbar-brand{
+      width: 70%;
+    }
+   }
