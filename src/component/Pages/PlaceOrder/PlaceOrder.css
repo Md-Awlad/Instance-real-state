@@ -1,0 +1,22 @@
+.place-Order img{
+width: 100%;
+}
+.place-Order{
+    padding: 80px 0px;
+}
+.place-order-form form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+
+}
+.place-order-form input{
+    margin-bottom: 20px;
+ padding: 10px 5px;
+}
+.place-order-form button{
+    margin-top: 10px;
+
+}

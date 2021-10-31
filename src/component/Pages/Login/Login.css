@@ -1,0 +1,25 @@
+.login-form{
+    padding: 100px 0px;
+
+}
+.login-form h1{
+    margin-bottom: 50px;
+}
+.form-body{
+   border-radius: 5px;
+    width: 50%;
+    margin: auto;
+    padding: 50px 0px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.login-form button{
+    border: none;
+    background-color: #C59D5F;
+    padding: 8px 20px;
+    color: white;
+    font-weight: bold;
+}
+.login-form button i{
+    color: rgb(16, 97, 204);
+    margin-right: 5px;
+}

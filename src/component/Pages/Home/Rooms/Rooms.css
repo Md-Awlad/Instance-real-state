@@ -1,0 +1,18 @@
+.rooms-home{
+    background-color: #F7F8FA;
+    padding: 80px 0px;
+}
+.rooms-home img{
+    width: 100%;
+}
+.rooms-home .card{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border: none;
+}
+.rooms-home .card .btn{
+    margin-bottom: 10px;
+}
+.button-use{
+    background-color: #C59D5F;
+    color: white;
+}
