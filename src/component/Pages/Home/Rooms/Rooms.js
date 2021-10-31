@@ -12,8 +12,11 @@ const Rooms = () => {
             <div className="container">
                 <h2 className='section-title'>ROOMS & SUITS</h2>
                 <div className="row row-cols-1 row-cols-md-3 g-4">
-                {
-                   rooms.map(item=><Room key={item._id} values={item}></Room>) 
+                {rooms.length ?  rooms.map(item=><Room key={item._id} values={item}></Room>) 
+                :
+                <div class="mx-auto spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                    </div>
                 }
                 </div>
             </div>

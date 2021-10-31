@@ -31,7 +31,6 @@ const Orders = (props) => {
         <p class="card-text"><b>Name: {name}</b></p>
         <p class="card-text">Email: {email}</p>
         <p class="card-text"><small class="text-muted">Address: {address}</small></p>
-        <button className='btn btn-primary'>Confirm</button>
         <button onClick={()=>deleteItems(_id)} className='btn btn-danger'>Cancel</button>
       </div>
     </div>
