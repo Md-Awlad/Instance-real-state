@@ -11,6 +11,11 @@ const ProductSection = () => {
         <div className='section-container'>
             <div className="container">
                 <h1 className='section-title'>Recent Properties</h1>
+                {!result.length && <div class="d-flex justify-content-center">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    </div>}
             <div className="row row-cols-1 row-cols-md-3 row-cols-sm-1 g-4">
                 {
                     result?.map(item=> <ProductCart key={item._id} values={item}></ProductCart>)

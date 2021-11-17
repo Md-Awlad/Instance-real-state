@@ -35,6 +35,7 @@ const Signup = () => {
             <div className='section-container'>
         <div className='container'>
         <div className="from-inner">
+        <p className='text-center text-danger'><b>{error}</b></p>
             <h1>Create Account</h1>
         <form onSubmit={submitUser}>
   <div class="mb-3">
@@ -50,7 +51,6 @@ const Signup = () => {
 </form>
 <br/>
 <p>Already A Member? <Link to="/login">Login</Link></p>
-<h1>{error}</h1>
         </div>
         </div>
         </div>

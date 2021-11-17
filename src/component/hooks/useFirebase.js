@@ -18,7 +18,7 @@ const useFirebase=()=>{
             history.replace('/')
         })
         .catch(error=>{
-            setError(error.code)
+            setError(error.massage)
         })
         .finally(()=>setIsloading(false))
     }
@@ -31,7 +31,7 @@ const useFirebase=()=>{
             // Profile updated!
             // ...
           }).catch((error) => {
-            setError(error.code)
+            setError(error.massage)
           })
           .finally(()=>setIsloading(false))
     }

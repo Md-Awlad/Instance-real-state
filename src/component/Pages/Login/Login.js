@@ -3,7 +3,7 @@ import { Link,useLocation,useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './Login.css'
 const Login = () => {
-    const {signinUser}=useAuth();
+    const {signinUser,error}=useAuth();
     const location = useLocation()
     const history = useHistory()
     const [email,setEmail]= useState('');
@@ -28,6 +28,7 @@ const Login = () => {
         <div className='section-container'>
         <div className='container'>
         <div className="from-inner">
+            <p className='text-center text-danger'><b>{error}</b></p>
             <h1>Login</h1>
         <form onSubmit={submitUser}>
   <div class="mb-3">

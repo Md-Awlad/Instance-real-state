@@ -7,3 +7,8 @@
 .from-inner input{
     padding: 10px;
 }
+@media only screen and (max-width: 687px) {
+    .from-inner{
+        width: 100%;
+    } 
+}

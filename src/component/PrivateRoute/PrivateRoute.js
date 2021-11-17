@@ -6,9 +6,11 @@ const PrivateRoute = ({children, ...rest }) => {
     const {user,isloading} = useAuth();
     if(isloading){
       return (
-            <div class="text-center mx-auto mt-5 spinner-border text-primary" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
+        <div class="d-flex my-5 justify-content-center">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
       )
     }
     return (
