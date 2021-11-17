@@ -16,10 +16,12 @@ import MakeAdmin from './component/Pages/MakeAdmin/MakeAdmin';
 import AdminRoute from './component/AdminRoute/AdminRoute';
 import AddProduct from './component/Pages/AddProduct/AddProduct';
 import ManageProduct from './component/Pages/ManageProducts/ManageProduct';
+import NotFound from './component/Pages/NotFound/NotFound';
 
 function App() {
   return (
-      <ContextProvider>
+      <div className="app">
+        <ContextProvider>
       <BrowserRouter>
     <Header/>
     <Switch>
@@ -59,10 +61,14 @@ function App() {
       <AdminRoute path='/manage-products'>
      <ManageProduct></ManageProduct>
       </AdminRoute>
+      <Route exact path='*'>
+        <NotFound></NotFound>
+      </Route>
     </Switch>
     <Footer></Footer>
     </BrowserRouter>
    </ContextProvider>
+      </div>
   );
 }
 

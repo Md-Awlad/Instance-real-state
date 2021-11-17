@@ -5,7 +5,7 @@ const ManageSingleProduct = (props) => {
     const deleteProduct=(id)=>{
         const wannaDelete = window.confirm('Do you want to delete Product?');
         if(wannaDelete){
-            fetch(`http://localhost:5000/products/${id}`,{
+            fetch(`https://stormy-citadel-14201.herokuapp.com/products/${id}`,{
                 method: 'DELETE'
                 })
                 .then(res=>res.json())
