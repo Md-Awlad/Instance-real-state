@@ -1,10 +1,11 @@
-const firebaseConfig = {
-  apiKey: "AIzaSyAHXFrY0fnD3tTLXD0-_9U39yY-cIVF0yI",
-  authDomain: "five-star-663bc.firebaseapp.com",
-  projectId: "five-star-663bc",
-  storageBucket: "five-star-663bc.appspot.com",
-  messagingSenderId: "853726499419",
-  appId: "1:853726499419:web:1816d868953c4e9b90257e"
-};
-export default firebaseConfig;
 
+const firebaseConfig = {
+  apiKey: "AIzaSyBvoIfHpEQaQwIWzvkGa5roAvv0A1AYx-4",
+  authDomain: "instance-realestate.firebaseapp.com",
+  projectId: "instance-realestate",
+  storageBucket: "instance-realestate.appspot.com",
+  messagingSenderId: "537359694790",
+  appId: "1:537359694790:web:fd8687939faf33c065d0c7"
+};
+
+export default firebaseConfig;

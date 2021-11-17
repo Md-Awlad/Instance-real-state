@@ -2,9 +2,9 @@ import React from 'react';
 import { Redirect, Route } from 'react-router';
 import useAuth from '../hooks/useAuth';
 
-const PrivateRoute = ({children, ...rest }) => {
-    const {user,isloading} = useAuth();
-    if(isloading){
+const AdminRoute = ({children, ...rest }) => {
+    const {user,isloading,isAdmin} = useAuth();
+    if(!isAdmin){
       return (
             <div class="text-center mx-auto mt-5 spinner-border text-primary" role="status">
       <span class="visually-hidden">Loading...</span>
@@ -15,12 +15,12 @@ const PrivateRoute = ({children, ...rest }) => {
         <Route
       {...rest}
       render={({ location }) =>
-      user.email ? (
+      user?.email && isAdmin ? (
           children
         ) : (
           <Redirect
             to={{
-              pathname: "/login",
+              pathname: "/home",
               state: { from: location }
             }}
           />
@@ -30,4 +30,4 @@ const PrivateRoute = ({children, ...rest }) => {
     );
 };
 
-export default PrivateRoute;
+export default AdminRoute;

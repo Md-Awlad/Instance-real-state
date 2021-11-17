@@ -1,0 +1,8 @@
+.make-admin{
+    width: 50%;
+}
+@media only screen and (max-width: 687px) {
+    .make-admin{
+        width: 100%;
+    }
+}

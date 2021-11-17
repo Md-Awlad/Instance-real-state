@@ -1,53 +1,68 @@
-import { BrowserRouter,Switch,Route } from 'react-router-dom';
 import './App.css';
-import AuthProviders from './component/AuthProvider/AuthProvider';
-import AddService from './component/Pages/AddService/AddService';
-import Footer from './component/Pages/Footer/Footer';
-import Header from './component/Pages/Header/Header';
 import Home from './component/Pages/Home/Home';
+import { BrowserRouter,Switch,Route } from 'react-router-dom';
+import Header from './component/Shared/Header/Header';
+import Footer from './component/Shared/Footer/Footer';
+import Explore from './component/Pages/Explore/Explore';
 import Login from './component/Pages/Login/Login';
-import ManageOrder from './component/Pages/ManageOrder/ManageOrder';
-import MyOrders from './component/Pages/MyOrders/MyOrders';
-import NotFound from './component/Pages/NotFound/NotFound';
-import PlaceOrer from './component/Pages/PlaceOrder/PlaceOrer';
+import Signup from './component/Pages/Signup/Signup';
+import ContextProvider from './component/ContextProvider/ContextProvider';
+import PlaceOrder from './component/Pages/PlaceOrder/PlaceOrder';
 import PrivateRoute from './component/PrivateRoute/PrivateRoute';
+import Myorder from './component/Pages/Myorders/Myorder';
+import UserReview from './component/Pages/UserReview/UserReview';
+import Pay from './component/Pages/Pay/Pay';
+import MakeAdmin from './component/Pages/MakeAdmin/MakeAdmin';
+import AdminRoute from './component/AdminRoute/AdminRoute';
+import AddProduct from './component/Pages/AddProduct/AddProduct';
+import ManageProduct from './component/Pages/ManageProducts/ManageProduct';
 
 function App() {
   return (
-    <div className="App">
-      <AuthProviders>
+      <ContextProvider>
       <BrowserRouter>
-      <Header></Header>
-      <Switch>
-        <Route exact path='/'>
-          <Home></Home>
-        </Route>
-        <Route exact path='/home'>
-          <Home></Home>
-        </Route>
-        <Route path='/login'>
-          <Login></Login>
-        </Route>
-        <PrivateRoute path="/place-order/:id">
-          <PlaceOrer></PlaceOrer>
-        </PrivateRoute>
-        <PrivateRoute path="/my-order">
-        <MyOrders></MyOrders>
-        </PrivateRoute>
-        <PrivateRoute path="/manage-order">
-        <ManageOrder></ManageOrder>
-        </PrivateRoute>
-        <PrivateRoute path="/add-service">
-       <AddService></AddService>
-        </PrivateRoute>
-        <Route path="*">
-    <NotFound></NotFound>
-        </Route>
-      </Switch>
-      <Footer></Footer>
-      </BrowserRouter>
-      </AuthProviders>
-    </div>
+    <Header/>
+    <Switch>
+      <Route exact path='/'>
+        <Home></Home>
+      </Route>
+      <Route path='/home'>
+        <Home></Home>
+      </Route>
+      <Route path='/explore'>
+        <Explore></Explore>
+      </Route>
+      <Route path='/login'>
+       <Login></Login>
+      </Route>
+      <Route path='/signup'>
+      <Signup></Signup>
+      </Route>
+      <PrivateRoute path='/place-order/:id'>
+      <PlaceOrder></PlaceOrder>
+      </PrivateRoute>
+      <PrivateRoute path='/my-order'>
+     <Myorder></Myorder>
+      </PrivateRoute>
+      <PrivateRoute path='/user-review'>
+     <UserReview></UserReview>
+      </PrivateRoute>
+      <PrivateRoute path='/payment'>
+     <Pay></Pay>
+      </PrivateRoute>
+      <AdminRoute path='/make-admin'>
+     <MakeAdmin></MakeAdmin>
+      </AdminRoute>
+      <AdminRoute path='/add-product'>
+     <AddProduct></AddProduct>
+      </AdminRoute>
+      <AdminRoute path='/manage-products'>
+     <ManageProduct></ManageProduct>
+      </AdminRoute>
+    </Switch>
+    <Footer></Footer>
+    </BrowserRouter>
+   </ContextProvider>
   );
 }
 

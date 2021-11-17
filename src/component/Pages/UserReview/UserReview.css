@@ -1,0 +1,26 @@
+.user-rate{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+.user-rate .far{
+    margin-right: 10px;
+    color: rgb(160, 160, 160);
+}
+.user-rate .fas{
+    margin-right: 10px;
+    color: #FF7E00;
+}
+.user-rating textarea{
+padding: 10px;
+width: 40%;
+margin-top: 20px;
+height: 100px;
+margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 687px) {
+    .user-rating textarea{
+        width: 100%;
+    } 
+}

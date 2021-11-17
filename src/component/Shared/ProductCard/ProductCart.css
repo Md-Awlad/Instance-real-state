@@ -1,0 +1,16 @@
+.my-button{
+    border: none;
+    background-color: #FF7E00;
+    padding: 6px 25px;
+    border-radius: 5px;
+    color: white;
+    font-size: 17px;
+}
+.card-name{
+    color: #FF7E00;
+    font-size: 25px;
+    font-weight: 700;
+}
+.order-cards{
+    border: none;
+}
