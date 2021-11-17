@@ -16,7 +16,7 @@ const PlaceOrder = () => {
     const onSubmit = data => {
         data.img=getSelected?.img;
         console.log(data)
-        fetch('http://localhost:5000/my-order',{
+        fetch('https://stormy-citadel-14201.herokuapp.com/my-order',{
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

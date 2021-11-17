@@ -61,7 +61,7 @@ const useFirebase=()=>{
     // save db 
     const saveUser =(email,displayName)=>{
       const user = {email,displayName};
-      fetch('http://localhost:5000/user',{
+      fetch('https://stormy-citadel-14201.herokuapp.com/user',{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -74,7 +74,7 @@ const useFirebase=()=>{
     }
     // is admin check 
     useEffect(()=>{
-      fetch(`http://localhost:5000/user/${user.email}`)
+      fetch(`https://stormy-citadel-14201.herokuapp.com/user/${user.email}`)
       .then(res=>res.json())
       .then(data=>{
         setIsadmin(data.admin)

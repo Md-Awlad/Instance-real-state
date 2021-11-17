@@ -6,7 +6,7 @@ const AddProduct = () => {
     const history = useHistory()
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const onSubmit = data => {
-    fetch('http://localhost:5000/products',{
+    fetch('https://stormy-citadel-14201.herokuapp.com/products',{
         method: "POST",
         headers: {
             "Content-type": "application/json"

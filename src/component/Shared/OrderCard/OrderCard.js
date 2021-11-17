@@ -5,7 +5,7 @@ const OrderCard = (props) => {
     const deleteOrder=(id)=>{
       const sureDelete =  window.confirm("Do you really want to Cancel?");
       if(sureDelete){
-        fetch(`http://localhost:5000/my-order/${id}`,{
+        fetch(`https://stormy-citadel-14201.herokuapp.com/my-order/${id}`,{
         method: 'DELETE',
       })
       .then(res=>res.json())

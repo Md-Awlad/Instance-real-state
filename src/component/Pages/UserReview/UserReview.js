@@ -10,7 +10,7 @@ const UserReview = () => {
     }
     const handleSubmitReviw=(e)=>{
         const ratings = {rates: rate,reviews: review}
-        fetch('http://localhost:5000/review',{
+        fetch('https://stormy-citadel-14201.herokuapp.com/review',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -20,7 +20,7 @@ const UserReview = () => {
         .then(res=>res.json())
         .then(data=> {
             if(data.insertedId){
-                    alert("Review added")
+                    alert("Review added");
             }
         })
      e.preventDefault();
