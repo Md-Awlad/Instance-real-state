@@ -31,7 +31,7 @@ const ShowReview = () => {
   return (
     <div className="section-container show-review-section">
       <div className="container">
-        <h1 className="section-title">Review</h1>
+        <h1 className="section-title">Reviews</h1>
         <Carousel responsive={responsive}>
           {reviws.map((item) => (
             <SingleReviw key={item._id} values={item}></SingleReviw>
